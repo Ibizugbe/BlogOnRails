@@ -37,7 +37,7 @@
 - rubocop
 
 ### Run tests
-run `rspec spec`
+run `rspec test`
 
 
 ## Authors
