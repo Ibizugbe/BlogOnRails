@@ -18,7 +18,7 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+## To get a local copy run the following steps:
 
 ### Prerequisites
 - Ruby
@@ -26,16 +26,18 @@ To get a local copy up and running follow these simple example steps.
 - Postgresql
 
 ### Setup
-
+- Copy this link [this link](https://github.com/Ibizugbe/BlogOnRails)
+- Open your terminal or command line
+- Run `git clone https://github.com/Ibizugbe/BlogOnRails`
+- Open the folder with your code editor
+- Run `rails s` to tart server.
 
 ### Install
-
-### Usage
+- stylelint
+- rubocop
 
 ### Run tests
-
-### Deployment
-
+run `rspec spec`
 
 
 ## Authors
