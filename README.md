@@ -14,18 +14,17 @@
 
 [No live demo yet]()
 
+
 ## Getting Started
 
 ## To get a local copy run the following steps:
 
 ### Prerequisites
-
 - Ruby
 - Ruby on rails
 - Postgresql
 
 ### Setup
-
 - Copy this link [this link](https://github.com/Ibizugbe/BlogOnRails)
 - Open your terminal or command line
 - Run `git clone https://github.com/Ibizugbe/BlogOnRails`
@@ -33,12 +32,10 @@
 - Run `rails s` to tart server.
 
 ### Install
-
 - stylelint
 - rubocop
 
 ### Run tests
-
 run `rspec test`
 
 ## Authors
