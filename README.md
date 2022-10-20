@@ -1,24 +1,67 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BlogOnRails
 
-Things you may want to cover:
+> Thia is a user friendly blog application built with Ruby On Rails.
 
-* Ruby version
 
-* System dependencies
+## Built With
 
-* Configuration
+- Ruby
+- Ruby on Rails
+- Rubocop
 
-* Database creation
+## Live Demo
 
-* Database initialization
+[No live demo yet]()
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting Started
 
-* Deployment instructions
+To get a local copy up and running follow these simple example steps.
 
-* ...
+### Prerequisites
+- Ruby
+- Ruby on rails
+- Postgresql
+
+### Setup
+
+
+### Install
+
+### Usage
+
+### Run tests
+
+### Deployment
+
+
+
+## Authors
+
+👤 **Abraham Ibizugbe**
+
+- GitHub: [@githubhandle](https://github.com/ibizugbe)
+- Twitter: [@twitterhandle](https://twitter.com/abrahamibizugbe)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/abrahamibizugbe)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
