@@ -4,7 +4,6 @@
 
 > This is a user friendly blog application built with Ruby On Rails.
 
-
 ## Built With
 
 - Ruby
@@ -38,7 +37,6 @@
 
 ### Run tests
 run `rspec test`
-
 
 ## Authors
 
