@@ -1,24 +1,70 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# BlogOnRails
 
-Things you may want to cover:
+> This is a user friendly blog application built with Ruby On Rails.
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Ruby
+- Ruby on Rails
+- Rubocop
 
-* Configuration
+## Live Demo
 
-* Database creation
+[No live demo yet]()
 
-* Database initialization
+## Getting Started
 
-* How to run the test suite
+## To get a local copy run the following steps:
 
-* Services (job queues, cache servers, search engines, etc.)
+### Prerequisites
 
-* Deployment instructions
+- Ruby
+- Ruby on rails
+- Postgresql
 
-* ...
+### Setup
+
+- Copy this link [this link](https://github.com/Ibizugbe/BlogOnRails)
+- Open your terminal or command line
+- Run `git clone https://github.com/Ibizugbe/BlogOnRails`
+- Open the folder with your code editor
+- Run `rails s` to tart server.
+
+### Install
+
+- stylelint
+- rubocop
+
+### Run tests
+
+run `rspec test`
+
+## Authors
+
+👤 **Abraham Ibizugbe**
+
+- GitHub: [@githubhandle](https://github.com/ibizugbe)
+- Twitter: [@twitterhandle](https://twitter.com/abrahamibizugbe)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/abrahamibizugbe)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
