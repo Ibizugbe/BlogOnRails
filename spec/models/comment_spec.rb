@@ -9,7 +9,7 @@ RSpec.describe Comment, type: :model do
   comment = Comment.create(Text: 'Hello world', post_id: post.id)
 
   context 'Update comments counter' do
-    comment.update_comments_counter
+    comment.update_comment_counter
 
     it 'should increment comments counter' do
       expect(post.comments_counter).to eq(3)

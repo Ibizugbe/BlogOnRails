@@ -9,7 +9,7 @@ RSpec.describe Like, type: :model do
   like = Like.create(author_id: user.id, post_id: post.id)
 
   context 'Update likes counter' do
-    like.update_likes_counter
+    like.update_like_counter
 
     it 'should increment likes counter' do
       expect(post.likes_counter).to eq(6)
