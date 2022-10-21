@@ -38,7 +38,7 @@
 ### Run tests
 run `rspec test`
 
-## Authors
+## Author
 
 👤 **Abraham Ibizugbe**
 
