@@ -3,8 +3,8 @@ require 'ffi'
 
 RSpec.describe Post, type: :model do
   before(:all) do
-    @user = User.new(Name: 'John', photo: 'https://www.google.com/url', Bio: 'I am a software developer',
-                     PostsCounter: 3)
+    @user = User.new(Name: 'John', Photo: 'https://www.google.com/url', Bio: 'I am a software developer',
+                     PostCounter: 3)
     @user.save
   end
 
