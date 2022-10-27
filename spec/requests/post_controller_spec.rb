@@ -3,6 +3,9 @@ RSpec.describe PostsController, type: :request do
   describe 'Check post main page' do
     before(:example) do
       get '/users/1/posts'
+    end
+
+    it 'render index template correctly' do
       expect(response).to render_template(:index)
     end
 
@@ -18,6 +21,9 @@ RSpec.describe PostsController, type: :request do
   describe 'Check posts for specific user' do
     before(:example) do
       get '//users/1/posts/:id'
+    end
+
+    it 'render index template correctly' do
       expect(response).to render_template(:show)
     end
 
