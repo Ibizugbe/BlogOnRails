@@ -1,16 +1,30 @@
 require 'rails_helper'
-
 RSpec.describe PostsController, type: :request do
-  it 'create list of posts for a specific user based on user-id' do
-    get '/users/:user_id/posts'
-    expect(response).to render_template(:index)
-    expect(response.body).to include('Lists of Posts for a specific User')
-    expect(response.status).to be(200)
+  describe 'Check post main page' do
+    before(:example) do
+      get '/users/1/posts'
+      expect(response).to render_template(:index)
+    end
+
+    it 'Checks if the status response is succes(OK)' do
+      expect(response.status).to be(200)
+    end
+
+    it 'Check the if the rendered template is correct' do
+      expect(response.body).to include('<p>this is a list of all posts</p>')
+    end
   end
-  it 'crate specific post of a user based on post id ans redirects to show posts page' do
-    get '/users/:user_id/posts/:id'
-    expect(response).to render_template(:show)
-    expect(response.body).to include('Specific post of a user based on post id')
-    expect(response.status).to be(200)
+
+  describe 'Check posts for specific user' do
+    before(:example) do
+      get '//users/1/posts/:id'
+      expect(response).to render_template(:show)
+    end
+
+    it 'Check the posts page for a given user' do
+      expect(response).to render_template(:show)
+      expect(response.body).to include('<p>this is a specified post</p>')
+      expect(response.status).to be(200)
+    end
   end
 end
