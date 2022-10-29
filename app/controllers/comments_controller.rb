@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   def create
     post = Post.find(params[:post_id])
     comment = Comment.new(comment_params)
-    comment.user = current_user
+    comment.author = current_user
     comment.post = post
     if comment.save
       flash[:success] = 'Comment successfully created!'
