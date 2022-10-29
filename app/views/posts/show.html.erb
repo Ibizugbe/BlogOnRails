@@ -1,16 +1,20 @@
-<h2><%= @posts.author.name%></h2>
+<h2><%= @post.author.name%></h2>
 <div class="post">
   <div class="my-post">
     <div class='post-title'>
-      <h3><%=@posts.title%> | by <%= @posts.author.name%></h3>
-      <p class="stats-comment"> Comments: <%= @posts.comment_counter or 0 %> | Likes: <%= @posts.like_counter or 0 %> </p>
+      <h3><%=@post.title%> | by <%= @post.author.name%></h3>
+      <p class="stats-comment"> Comments: <%= @post.comment_counter or 0 %> | Likes: <%= @post.like_counter or 0 %> </p>
     </div>
-      <p>Post : <%= @posts.text%> </p>
+      <p>Post : <%= @post.text%> </p>
   </div>
   <div class="comment">
-    <% @posts.comments.each do |comment| %>
+    <% @post.comments.each do |comment| %>
       <% username = User.find(comment.author_id).name %>
       <p> <%= username%>: <%= comment.text%><p>
     <% end %>
+    <%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |f| %>
+      <%= f.submit "Like" %>
+    <% end %>
+    <%= link_to 'Add comment', new_user_post_comment_path(@user, @post) %>
   </div>
 </div>
