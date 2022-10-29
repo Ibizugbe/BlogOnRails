@@ -1,11 +1,11 @@
-<h2>Specific post and its comment</h2>
-<div class="posts">
-  <div class="post">
-  <div class='specific-post-title'>
-    <h3><%=@posts.title%> | by </h3>
-     <p class="stats-comment"> Comments: <%= @posts.comment_counter or 0 %> | Likes: <%= @posts.like_counter or 0 %> </p>
-     </div>
-    <p>Post : <%= @posts.text%> </p>
+<h2>Spe</h2>
+<div class="post">
+  <div class="">
+    <div class='post-title'>
+      <h3><%=@posts.title%> | by <%= @posts.author.name%></h3>
+      <p class="stats-comment"> Comments: <%= @posts.comment_counter or 0 %> | Likes: <%= @posts.like_counter or 0 %> </p>
+    </div>
+      <p>Post : <%= @posts.text%> </p>
   </div>
   <div class="comment">
     <% @posts.comments.each do |comment| %>
