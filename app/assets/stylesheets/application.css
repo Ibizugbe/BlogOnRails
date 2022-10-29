@@ -16,15 +16,12 @@ section {
   padding: 40px;
 }
 
-.author {
-  padding: 10px;
-}
-
 .author-header {
   text-align: center;
 }
 
 .author {
+  padding: 10px;
   display: grid;
   gap: 20px;
   grid-template-columns: auto auto auto;
