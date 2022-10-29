@@ -5,6 +5,13 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+  end
+
+  def new
+    @user = User.find(params[:user_id])
+    @post = @user.posts.new
+    render :new, locals: { post: @post }
   end
 end
