@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'renders users Show Page', type: :feature do
   before :each do
     @user = User.create(name: 'Tom Ford', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
