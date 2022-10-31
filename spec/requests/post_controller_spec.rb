@@ -14,7 +14,7 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'Check the if the rendered template is correct' do
-      expect(response.body).to include('<p>this is a list of all posts</p>')
+      expect(response.body).to include('<h1>User Posts page</h1>')
     end
   end
 
