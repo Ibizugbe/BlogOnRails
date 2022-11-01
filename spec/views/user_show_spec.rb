@@ -47,7 +47,7 @@ RSpec.describe 'renders users Show Page', type: :feature do
   end
 
   it "click post and redirect to that post's show page." do
-    click_link 'See all posts'
-    expect(page).to have_current_path user_posts_path(@user)
+    click_link 'Load More'
+    expect(page).to have_current_path("/users/#{@user.id.to_s}")
   end
 end
