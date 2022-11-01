@@ -16,6 +16,14 @@ RSpec.describe 'Render posts index page', type: :feature do
     expect(page).to have_content('This is my first post')
   end
 
+  it "renders user's profile picture" do
+    all('img').each do |i|
+      expect(i[:src]).to eq('https://unsplash.com/photos/F_-0BxGuVvo')
+    end
+  end
+
+
+
   scenario 'display the post title' do
     expect(page).to have_content(@first_post.title)
   end
