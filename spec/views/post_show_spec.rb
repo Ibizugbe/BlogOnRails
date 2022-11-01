@@ -20,6 +20,12 @@ RSpec.describe 'Renders the post show page', type: :feature do
     expect(page).to have_content('John Carson')
   end
 
+  it 'can see the username of each commentor.' do
+    post = Post.first
+    comment = post.comments.first
+    expect(page).to have_content("John Carson")
+  end
+
   scenario 'disolays number of comments' do
     expect(page).to have_content('Comments: 5')
   end
@@ -31,4 +37,6 @@ RSpec.describe 'Renders the post show page', type: :feature do
   scenario 'displays the content of the post' do
     expect(page).to have_content(@first_post.text)
   end
+
+
 end
