@@ -22,6 +22,10 @@ RSpec.describe 'Render posts index page', type: :feature do
     end
   end
 
+  it 'shows the users username' do
+    expect(page).to have_content('John Carson')
+  end
+
 
 
   scenario 'display the post title' do
