@@ -5,7 +5,9 @@ RSpec.describe 'Render posts index page', type: :feature do
     @user = User.create(name: 'John Carson', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                         bio: 'I am an auditor with 30 years working experience.', post_counter: 0)
     @first_post = Post.create(title: 'Hello', text: 'This is my first post', comment_counter: 0, like_counter: 0,
-                              author_id: @user.id)
+                              author: @user)
+    @second_post = Post.create(title: 'welcome', text: 'This is my second post', comment_counter: 0, like_counter: 0,
+                              author: @user)
     5.times do |_i|
       Comment.create(text: 'Nice post!!', author_id: @user.id, post_id: @first_post.id)
     end
@@ -16,17 +18,20 @@ RSpec.describe 'Render posts index page', type: :feature do
     expect(page).to have_content('This is my first post')
   end
 
-  it "renders user's profile picture" do
+  scenario "renders user's profile picture" do
     all('img').each do |i|
       expect(i[:src]).to eq('https://unsplash.com/photos/F_-0BxGuVvo')
     end
   end
 
-  it 'shows the users username' do
+  scenario 'shows the users username' do
     expect(page).to have_content('John Carson')
   end
 
-
+  it 'shows number of posts by user' do
+    user = User.first
+    expect(page).to have_content(user.post_counter)
+  end
 
   scenario 'display the post title' do
     expect(page).to have_content(@first_post.title)
