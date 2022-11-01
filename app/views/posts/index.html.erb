@@ -3,7 +3,7 @@
 <%= render'partials/user', user: @user %>
   <% @posts.each do |post| %>
   <div class="post">
-    <a href="/users/<%= @user.id %>/posts/<%= post.id %>">
+    <a id="Time" href="/users/<%= @user.id %>/posts/<%= post.id %>">
     <%= render'partials/post', post: post%>
     </a>
     

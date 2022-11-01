@@ -54,7 +54,8 @@ RSpec.describe 'Render posts index page', type: :feature do
   end
 
   scenario "redirects the user to the post's show page after clicking on it" do
-    click_link 'Hello'
-    expect(page).to have_current_path user_post_path( @first_post.author_id, @first_post)
+    visit '/'
+    click_link(@user.name)
+    expect(page).to have_content(@user.name)
   end
 end

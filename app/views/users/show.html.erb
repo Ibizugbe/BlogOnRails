@@ -8,11 +8,13 @@
   </div>
   <ul class='post'>
     <% @user.return_recent_posts.each do |post| %>
+      <%=  render 'partials/post', post: post %>
       <a href="/users/<%= @user.id %>/posts/<%= post.id %> ">
-        <%=  render 'partials/post', post: post %>
+        see more post
       </a>
     <% end %>
   </ul>
+
   <a href="#">
     <button class='load-btn'> Load More </button>
   </a>
