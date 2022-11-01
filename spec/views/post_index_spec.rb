@@ -28,7 +28,7 @@ RSpec.describe 'Render posts index page', type: :feature do
     expect(page).to have_content('John Carson')
   end
 
-  it 'shows number of posts by user' do
+  scenario 'shows number of posts by user' do
     user = User.first
     expect(page).to have_content(user.post_counter)
   end
@@ -51,5 +51,10 @@ RSpec.describe 'Render posts index page', type: :feature do
 
   scenario 'display the how many Likes' do
     expect(page).to have_content('Likes: 0')
+  end
+
+  scenario "redirects the user to the post's show page after clicking on it" do
+    click_link 'Hello'
+    expect(page).to have_current_path user_post_path( @first_post.author_id, @first_post)
   end
 end

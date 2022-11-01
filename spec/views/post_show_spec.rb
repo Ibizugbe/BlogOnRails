@@ -38,5 +38,11 @@ RSpec.describe 'Renders the post show page', type: :feature do
     expect(page).to have_content(@first_post.text)
   end
 
-
+  scenario 'can see the comments of each commentor.' do
+    expect(page).to have_content 'Nice post!!'
+    expect(page).to have_content 'Nice post!!'
+    expect(page).to have_content 'Nice post!!'
+    expect(page).to have_content 'Nice post!!'
+    expect(page).to have_content 'Nice post!!'
+  end
 end
