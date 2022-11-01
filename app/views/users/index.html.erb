@@ -3,7 +3,7 @@
   <section>
     <ul class='authors'>
       <% @users.each do |user| %>
-        <a href='/users/<%= user.id %>'>
+        <a id='Time' href='/users/<%= user.id %>'>
           <%=render 'partials/user', user:user %>
         </a>
       <% end %>

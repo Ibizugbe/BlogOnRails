@@ -14,13 +14,13 @@ RSpec.describe PostsController, type: :request do
     end
 
     it 'Check the if the rendered template is correct' do
-      expect(response.body).to include('<p>this is a list of all posts</p>')
+      expect(response.body).to include('<h1>User Posts page</h1>')
     end
   end
 
   describe 'Check posts for specific user' do
     before(:example) do
-      get '//users/1/posts/:id'
+      get '//users/1/posts/2'
     end
 
     it 'render index template correctly' do
@@ -29,7 +29,7 @@ RSpec.describe PostsController, type: :request do
 
     it 'Check the posts page for a given user' do
       expect(response).to render_template(:show)
-      expect(response.body).to include('<p>this is a specified post</p>')
+      expect(response.body).to include('<h3>Hello | by John</h3>')
       expect(response.status).to be(200)
     end
   end
