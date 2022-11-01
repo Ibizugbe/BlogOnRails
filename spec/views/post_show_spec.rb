@@ -5,7 +5,7 @@ RSpec.describe 'Renders the post show page', type: :feature do
     @first_post = Post.create(title: 'Hello', text: 'This is my first post', comment_counter: 0, like_counter: 0,
                               author_id: @user.id)
     @second_post = Post.create(title: 'welcome', text: 'This is my second post', comment_counter: 0, like_counter: 0,
-                                author_id: @user.id)
+                               author_id: @user.id)
     5.times do |_i|
       Comment.create(text: 'Nice post!!', author_id: @user.id, post_id: @first_post.id)
     end
@@ -21,9 +21,7 @@ RSpec.describe 'Renders the post show page', type: :feature do
   end
 
   it 'can see the username of each commentor.' do
-    post = Post.first
-    comment = post.comments.first
-    expect(page).to have_content("John Carson")
+    expect(page).to have_content('John Carson')
   end
 
   scenario 'disolays number of comments' do

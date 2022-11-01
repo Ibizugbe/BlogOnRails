@@ -7,7 +7,7 @@ RSpec.describe 'Render posts index page', type: :feature do
     @first_post = Post.create(title: 'Hello', text: 'This is my first post', comment_counter: 0, like_counter: 0,
                               author: @user)
     @second_post = Post.create(title: 'welcome', text: 'This is my second post', comment_counter: 0, like_counter: 0,
-                              author: @user)
+                               author: @user)
     5.times do |_i|
       Comment.create(text: 'Nice post!!', author_id: @user.id, post_id: @first_post.id)
     end

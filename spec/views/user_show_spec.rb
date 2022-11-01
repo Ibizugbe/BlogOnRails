@@ -4,7 +4,7 @@ RSpec.describe 'renders users Show Page', type: :feature do
   before :each do
     @user = User.create(name: 'Tom Ford', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
                         bio: 'I am a fashion designer with 2 decades of experience', post_counter: 0)
-    
+
     visit root_path
 
     5.times do |i|
@@ -48,6 +48,6 @@ RSpec.describe 'renders users Show Page', type: :feature do
 
   it "click post and redirect to that post's show page." do
     click_link 'Load More'
-    expect(page).to have_current_path("/users/#{@user.id.to_s}")
+    expect(page).to have_current_path("/users/#{@user.id}")
   end
 end
