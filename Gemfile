@@ -82,3 +82,5 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'ffi', github: 'ffi/ffi', submodules: true
 
 gem 'bullet', group: 'development'
+
+gem 'devise'
